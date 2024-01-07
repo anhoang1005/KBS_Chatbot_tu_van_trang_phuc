@@ -1,0 +1,788 @@
+PART 1. Dữ liệu (Luật)
+  1) Productions
+    R1: G01->P01
+    R2: G01->P02
+    R3: G01->P03
+    R4: G01->P04
+    R5: G02->P02
+    R6: G02->P03
+    R7: G02->P05
+    R8: G02->P06
+    R9: C01->P02
+    R10: C01->P06
+    R11: Z06->N08
+    R12: C01->N06
+    R13: C02->N02
+    R14: C03->N01
+    R15: C04->N05
+    R16: C05->N06
+    R17: C06->N01
+    R18: S01->N07
+    R19: S02->N04
+    R20: S03->N01
+    R21: C02->P01
+    R22: S04->N02
+    R23: S05->N02
+    R24: S06->N04
+    R25: S07->N02
+    R26: C02->P02
+    R27: Z01->M01
+    R28: Z02->M02
+    R29: Z03->M02
+    R30: Z04->M04
+    R31: Z05->M03
+    R32: Z06->M01
+    R33: C01->M01
+    R34: C02->M04
+    R35: C03->M01
+    R36: C02->P04
+    R37: C04->M02
+    R38: C05->M01
+    R39: C06->M05
+    R40: S01->M01
+    R41: S02->M04
+    R42: S03->M02
+    R43: S04->M01
+    R44: S05->M01
+    R45: S06->M05
+    R46: S07->M04
+    R47: C03->P01
+    R48: K01->M04
+    R49: C03->P04
+    R50: C04->P02
+    R51: C04->P03
+    R52: C05->P01
+    R53: C05->P04
+    R54: C06->P03
+    R55: C06->P05
+    R56: V01->P02
+    R57: V01->P03
+    R58: V02->P01
+    R59: V02->P04
+    R60: V03->P01
+    R61: V03->P02
+    R62: V04->P01
+    R63: V04->P05
+    R64: V05->P03
+    R65: V05->P06
+    R66: S01->P01
+    R67: S01->P04
+    R68: S02->P01
+    R69: S02->P02
+    R70: S02->P04
+    R71: S03->P03
+    R72: S03->P06
+    R73: S04->P01
+    R74: S04->P03
+    R75: S05->P01
+    R76: S05->P02
+    R77: S06->P03
+    R78: S07->P01
+    R79: S07->P02
+    R80: L01->P01
+    R81: L01->P02
+    R82: L01->P03
+    R83: L01->P04
+    R84: L02->P01
+    R85: L02->P04
+    R86: L02->P05
+    R87: L03->P01
+    R88: L03->P05
+    R89: G02->N01
+    R90: G01->N02
+    R91: G01->N03
+    R92: G01->N04
+    R93: G02->N05
+    R94: G02->N06
+    R95: G02->N07
+    R96: G02->N08
+    R97: G02->N09
+    R98: G02->N10
+    R99: Z01->N06
+    R100: Z01->N09
+    R101: Z02->N06
+    R102: Z02->N02
+    R103: Z03->N02
+    R104: Z03->N07
+    R105: Z04->N02
+    R106: Z04->N09
+    R107: Z04->N05
+    R108: Z05->N03
+    R109: Z05->N06
+
+  2) Facts C02, G01, K01, L02, S07, V03, Z04.
+
+  3) Goal None
+
+PART 2. Suy Diễn
+  1 ITERATION
+    R1:G01->P01 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01.
+
+  2 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02.
+
+  3 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03.
+
+  4 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04.
+
+  5 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R6:G02->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R7:G02->P05 Không được áp dụng, vì thiếu fact: G02
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04, N02.
+
+  6 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R6:G02->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R7:G02->P05 Không được áp dụng, vì thiếu fact: G02
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 bỏ qua, vì flag1 đã được cập nhật.
+    R14:C03->N01 Không được áp dụng, vì thiếu fact: C03
+    R15:C04->N05 Không được áp dụng, vì thiếu fact: C04
+    R16:C05->N06 Không được áp dụng, vì thiếu fact: C05
+    R17:C06->N01 Không được áp dụng, vì thiếu fact: C06
+    R18:S01->N07 Không được áp dụng, vì thiếu fact: S01
+    R19:S02->N04 Không được áp dụng, vì thiếu fact: S02
+    R20:S03->N01 Không được áp dụng, vì thiếu fact: S03
+    R21:C02->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R22:S04->N02 không áp dụng, vì N02 nắm trong số các facts. Cập nhật flag2.
+    R23:S05->N02 không áp dụng, vì N02 nắm trong số các facts. Cập nhật flag2.
+    R24:S06->N04 Không được áp dụng, vì thiếu fact: S06
+    R25:S07->N02 không áp dụng, vì N02 nắm trong số các facts. Cập nhật flag2.
+    R26:C02->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R27:Z01->M01 Không được áp dụng, vì thiếu fact: Z01
+    R28:Z02->M02 Không được áp dụng, vì thiếu fact: Z02
+    R29:Z03->M02 Không được áp dụng, vì thiếu fact: Z03
+    R30:Z04->M04 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04, N02, M04.
+
+  7 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R6:G02->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R7:G02->P05 Không được áp dụng, vì thiếu fact: G02
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 bỏ qua, vì flag1 đã được cập nhật.
+    R14:C03->N01 Không được áp dụng, vì thiếu fact: C03
+    R15:C04->N05 Không được áp dụng, vì thiếu fact: C04
+    R16:C05->N06 Không được áp dụng, vì thiếu fact: C05
+    R17:C06->N01 Không được áp dụng, vì thiếu fact: C06
+    R18:S01->N07 Không được áp dụng, vì thiếu fact: S01
+    R19:S02->N04 Không được áp dụng, vì thiếu fact: S02
+    R20:S03->N01 Không được áp dụng, vì thiếu fact: S03
+    R21:C02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R22:S04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R23:S05->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R24:S06->N04 Không được áp dụng, vì thiếu fact: S06
+    R25:S07->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R26:C02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R27:Z01->M01 Không được áp dụng, vì thiếu fact: Z01
+    R28:Z02->M02 Không được áp dụng, vì thiếu fact: Z02
+    R29:Z03->M02 Không được áp dụng, vì thiếu fact: Z03
+    R30:Z04->M04 bỏ qua, vì flag1 đã được cập nhật.
+    R31:Z05->M03 Không được áp dụng, vì thiếu fact: Z05
+    R32:Z06->M01 Không được áp dụng, vì thiếu fact: Z06
+    R33:C01->M01 Không được áp dụng, vì thiếu fact: C01
+    R34:C02->M04 không áp dụng, vì M04 nắm trong số các facts. Cập nhật flag2.
+    R35:C03->M01 Không được áp dụng, vì thiếu fact: C03
+    R36:C02->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R37:C04->M02 Không được áp dụng, vì thiếu fact: C04
+    R38:C05->M01 Không được áp dụng, vì thiếu fact: C05
+    R39:C06->M05 Không được áp dụng, vì thiếu fact: C06
+    R40:S01->M01 Không được áp dụng, vì thiếu fact: S01
+    R41:S02->M04 không áp dụng, vì M04 nắm trong số các facts. Cập nhật flag2.
+    R42:S03->M02 Không được áp dụng, vì thiếu fact: S03
+    R43:S04->M01 Không được áp dụng, vì thiếu fact: S04
+    R44:S05->M01 Không được áp dụng, vì thiếu fact: S05
+    R45:S06->M05 Không được áp dụng, vì thiếu fact: S06
+    R46:S07->M04 không áp dụng, vì M04 nắm trong số các facts. Cập nhật flag2.
+    R47:C03->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R48:K01->M04 không áp dụng, vì M04 nắm trong số các facts. Cập nhật flag2.
+    R49:C03->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R50:C04->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R51:C04->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R52:C05->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R53:C05->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R54:C06->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R55:C06->P05 Không được áp dụng, vì thiếu fact: C06
+    R56:V01->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R57:V01->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R58:V02->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R59:V02->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R60:V03->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R61:V03->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R62:V04->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R63:V04->P05 Không được áp dụng, vì thiếu fact: V04
+    R64:V05->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R65:V05->P06 Không được áp dụng, vì thiếu fact: V05
+    R66:S01->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R67:S01->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R68:S02->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R69:S02->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R70:S02->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R71:S03->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R72:S03->P06 Không được áp dụng, vì thiếu fact: S03
+    R73:S04->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R74:S04->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R75:S05->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R76:S05->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R77:S06->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R78:S07->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R79:S07->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R80:L01->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R81:L01->P02 không áp dụng, vì P02 nắm trong số các facts. Cập nhật flag2.
+    R82:L01->P03 không áp dụng, vì P03 nắm trong số các facts. Cập nhật flag2.
+    R83:L01->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R84:L02->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R85:L02->P04 không áp dụng, vì P04 nắm trong số các facts. Cập nhật flag2.
+    R86:L02->P05 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04, N02, M04, P05.
+
+  8 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R6:G02->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R7:G02->P05 không áp dụng, vì P05 nắm trong số các facts. Cập nhật flag2.
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 bỏ qua, vì flag1 đã được cập nhật.
+    R14:C03->N01 Không được áp dụng, vì thiếu fact: C03
+    R15:C04->N05 Không được áp dụng, vì thiếu fact: C04
+    R16:C05->N06 Không được áp dụng, vì thiếu fact: C05
+    R17:C06->N01 Không được áp dụng, vì thiếu fact: C06
+    R18:S01->N07 Không được áp dụng, vì thiếu fact: S01
+    R19:S02->N04 Không được áp dụng, vì thiếu fact: S02
+    R20:S03->N01 Không được áp dụng, vì thiếu fact: S03
+    R21:C02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R22:S04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R23:S05->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R24:S06->N04 Không được áp dụng, vì thiếu fact: S06
+    R25:S07->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R26:C02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R27:Z01->M01 Không được áp dụng, vì thiếu fact: Z01
+    R28:Z02->M02 Không được áp dụng, vì thiếu fact: Z02
+    R29:Z03->M02 Không được áp dụng, vì thiếu fact: Z03
+    R30:Z04->M04 bỏ qua, vì flag1 đã được cập nhật.
+    R31:Z05->M03 Không được áp dụng, vì thiếu fact: Z05
+    R32:Z06->M01 Không được áp dụng, vì thiếu fact: Z06
+    R33:C01->M01 Không được áp dụng, vì thiếu fact: C01
+    R34:C02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R35:C03->M01 Không được áp dụng, vì thiếu fact: C03
+    R36:C02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R37:C04->M02 Không được áp dụng, vì thiếu fact: C04
+    R38:C05->M01 Không được áp dụng, vì thiếu fact: C05
+    R39:C06->M05 Không được áp dụng, vì thiếu fact: C06
+    R40:S01->M01 Không được áp dụng, vì thiếu fact: S01
+    R41:S02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R42:S03->M02 Không được áp dụng, vì thiếu fact: S03
+    R43:S04->M01 Không được áp dụng, vì thiếu fact: S04
+    R44:S05->M01 Không được áp dụng, vì thiếu fact: S05
+    R45:S06->M05 Không được áp dụng, vì thiếu fact: S06
+    R46:S07->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R47:C03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R48:K01->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R49:C03->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R50:C04->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R51:C04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R52:C05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R53:C05->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R54:C06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R55:C06->P05 không áp dụng, vì P05 nắm trong số các facts. Cập nhật flag2.
+    R56:V01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R57:V01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R58:V02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R59:V02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R60:V03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R61:V03->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R62:V04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R63:V04->P05 không áp dụng, vì P05 nắm trong số các facts. Cập nhật flag2.
+    R64:V05->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R65:V05->P06 Không được áp dụng, vì thiếu fact: V05
+    R66:S01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R67:S01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R68:S02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R69:S02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R70:S02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R71:S03->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R72:S03->P06 Không được áp dụng, vì thiếu fact: S03
+    R73:S04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R74:S04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R75:S05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R76:S05->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R77:S06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R78:S07->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R79:S07->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R80:L01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R81:L01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R82:L01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R83:L01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R84:L02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R85:L02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R86:L02->P05 bỏ qua, vì flag1 đã được cập nhật.
+    R87:L03->P01 không áp dụng, vì P01 nắm trong số các facts. Cập nhật flag2.
+    R88:L03->P05 không áp dụng, vì P05 nắm trong số các facts. Cập nhật flag2.
+    R89:G02->N01 Không được áp dụng, vì thiếu fact: G02
+    R90:G01->N02 không áp dụng, vì N02 nắm trong số các facts. Cập nhật flag2.
+    R91:G01->N03 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04, N02, M04, P05, N03.
+
+  9 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R6:G02->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R7:G02->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 bỏ qua, vì flag1 đã được cập nhật.
+    R14:C03->N01 Không được áp dụng, vì thiếu fact: C03
+    R15:C04->N05 Không được áp dụng, vì thiếu fact: C04
+    R16:C05->N06 Không được áp dụng, vì thiếu fact: C05
+    R17:C06->N01 Không được áp dụng, vì thiếu fact: C06
+    R18:S01->N07 Không được áp dụng, vì thiếu fact: S01
+    R19:S02->N04 Không được áp dụng, vì thiếu fact: S02
+    R20:S03->N01 Không được áp dụng, vì thiếu fact: S03
+    R21:C02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R22:S04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R23:S05->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R24:S06->N04 Không được áp dụng, vì thiếu fact: S06
+    R25:S07->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R26:C02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R27:Z01->M01 Không được áp dụng, vì thiếu fact: Z01
+    R28:Z02->M02 Không được áp dụng, vì thiếu fact: Z02
+    R29:Z03->M02 Không được áp dụng, vì thiếu fact: Z03
+    R30:Z04->M04 bỏ qua, vì flag1 đã được cập nhật.
+    R31:Z05->M03 Không được áp dụng, vì thiếu fact: Z05
+    R32:Z06->M01 Không được áp dụng, vì thiếu fact: Z06
+    R33:C01->M01 Không được áp dụng, vì thiếu fact: C01
+    R34:C02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R35:C03->M01 Không được áp dụng, vì thiếu fact: C03
+    R36:C02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R37:C04->M02 Không được áp dụng, vì thiếu fact: C04
+    R38:C05->M01 Không được áp dụng, vì thiếu fact: C05
+    R39:C06->M05 Không được áp dụng, vì thiếu fact: C06
+    R40:S01->M01 Không được áp dụng, vì thiếu fact: S01
+    R41:S02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R42:S03->M02 Không được áp dụng, vì thiếu fact: S03
+    R43:S04->M01 Không được áp dụng, vì thiếu fact: S04
+    R44:S05->M01 Không được áp dụng, vì thiếu fact: S05
+    R45:S06->M05 Không được áp dụng, vì thiếu fact: S06
+    R46:S07->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R47:C03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R48:K01->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R49:C03->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R50:C04->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R51:C04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R52:C05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R53:C05->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R54:C06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R55:C06->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R56:V01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R57:V01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R58:V02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R59:V02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R60:V03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R61:V03->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R62:V04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R63:V04->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R64:V05->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R65:V05->P06 Không được áp dụng, vì thiếu fact: V05
+    R66:S01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R67:S01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R68:S02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R69:S02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R70:S02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R71:S03->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R72:S03->P06 Không được áp dụng, vì thiếu fact: S03
+    R73:S04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R74:S04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R75:S05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R76:S05->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R77:S06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R78:S07->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R79:S07->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R80:L01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R81:L01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R82:L01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R83:L01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R84:L02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R85:L02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R86:L02->P05 bỏ qua, vì flag1 đã được cập nhật.
+    R87:L03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R88:L03->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R89:G02->N01 Không được áp dụng, vì thiếu fact: G02
+    R90:G01->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R91:G01->N03 bỏ qua, vì flag1 đã được cập nhật.
+    R92:G01->N04 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04, N02, M04, P05, N03, N04.
+
+  10 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R6:G02->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R7:G02->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 bỏ qua, vì flag1 đã được cập nhật.
+    R14:C03->N01 Không được áp dụng, vì thiếu fact: C03
+    R15:C04->N05 Không được áp dụng, vì thiếu fact: C04
+    R16:C05->N06 Không được áp dụng, vì thiếu fact: C05
+    R17:C06->N01 Không được áp dụng, vì thiếu fact: C06
+    R18:S01->N07 Không được áp dụng, vì thiếu fact: S01
+    R19:S02->N04 không áp dụng, vì N04 nắm trong số các facts. Cập nhật flag2.
+    R20:S03->N01 Không được áp dụng, vì thiếu fact: S03
+    R21:C02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R22:S04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R23:S05->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R24:S06->N04 không áp dụng, vì N04 nắm trong số các facts. Cập nhật flag2.
+    R25:S07->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R26:C02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R27:Z01->M01 Không được áp dụng, vì thiếu fact: Z01
+    R28:Z02->M02 Không được áp dụng, vì thiếu fact: Z02
+    R29:Z03->M02 Không được áp dụng, vì thiếu fact: Z03
+    R30:Z04->M04 bỏ qua, vì flag1 đã được cập nhật.
+    R31:Z05->M03 Không được áp dụng, vì thiếu fact: Z05
+    R32:Z06->M01 Không được áp dụng, vì thiếu fact: Z06
+    R33:C01->M01 Không được áp dụng, vì thiếu fact: C01
+    R34:C02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R35:C03->M01 Không được áp dụng, vì thiếu fact: C03
+    R36:C02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R37:C04->M02 Không được áp dụng, vì thiếu fact: C04
+    R38:C05->M01 Không được áp dụng, vì thiếu fact: C05
+    R39:C06->M05 Không được áp dụng, vì thiếu fact: C06
+    R40:S01->M01 Không được áp dụng, vì thiếu fact: S01
+    R41:S02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R42:S03->M02 Không được áp dụng, vì thiếu fact: S03
+    R43:S04->M01 Không được áp dụng, vì thiếu fact: S04
+    R44:S05->M01 Không được áp dụng, vì thiếu fact: S05
+    R45:S06->M05 Không được áp dụng, vì thiếu fact: S06
+    R46:S07->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R47:C03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R48:K01->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R49:C03->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R50:C04->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R51:C04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R52:C05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R53:C05->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R54:C06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R55:C06->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R56:V01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R57:V01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R58:V02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R59:V02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R60:V03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R61:V03->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R62:V04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R63:V04->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R64:V05->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R65:V05->P06 Không được áp dụng, vì thiếu fact: V05
+    R66:S01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R67:S01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R68:S02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R69:S02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R70:S02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R71:S03->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R72:S03->P06 Không được áp dụng, vì thiếu fact: S03
+    R73:S04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R74:S04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R75:S05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R76:S05->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R77:S06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R78:S07->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R79:S07->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R80:L01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R81:L01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R82:L01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R83:L01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R84:L02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R85:L02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R86:L02->P05 bỏ qua, vì flag1 đã được cập nhật.
+    R87:L03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R88:L03->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R89:G02->N01 Không được áp dụng, vì thiếu fact: G02
+    R90:G01->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R91:G01->N03 bỏ qua, vì flag1 đã được cập nhật.
+    R92:G01->N04 bỏ qua, vì flag1 đã được cập nhật.
+    R93:G02->N05 Không được áp dụng, vì thiếu fact: G02
+    R94:G02->N06 Không được áp dụng, vì thiếu fact: G02
+    R95:G02->N07 Không được áp dụng, vì thiếu fact: G02
+    R96:G02->N08 Không được áp dụng, vì thiếu fact: G02
+    R97:G02->N09 Không được áp dụng, vì thiếu fact: G02
+    R98:G02->N10 Không được áp dụng, vì thiếu fact: G02
+    R99:Z01->N06 Không được áp dụng, vì thiếu fact: Z01
+    R100:Z01->N09 Không được áp dụng, vì thiếu fact: Z01
+    R101:Z02->N06 Không được áp dụng, vì thiếu fact: Z02
+    R102:Z02->N02 không áp dụng, vì N02 nắm trong số các facts. Cập nhật flag2.
+    R103:Z03->N02 không áp dụng, vì N02 nắm trong số các facts. Cập nhật flag2.
+    R104:Z03->N07 Không được áp dụng, vì thiếu fact: Z03
+    R105:Z04->N02 không áp dụng, vì N02 nắm trong số các facts. Cập nhật flag2.
+    R106:Z04->N09 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04, N02, M04, P05, N03, N04, N09.
+
+  11 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R6:G02->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R7:G02->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 bỏ qua, vì flag1 đã được cập nhật.
+    R14:C03->N01 Không được áp dụng, vì thiếu fact: C03
+    R15:C04->N05 Không được áp dụng, vì thiếu fact: C04
+    R16:C05->N06 Không được áp dụng, vì thiếu fact: C05
+    R17:C06->N01 Không được áp dụng, vì thiếu fact: C06
+    R18:S01->N07 Không được áp dụng, vì thiếu fact: S01
+    R19:S02->N04 bỏ qua, vì flag2 đã được cập nhật.
+    R20:S03->N01 Không được áp dụng, vì thiếu fact: S03
+    R21:C02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R22:S04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R23:S05->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R24:S06->N04 bỏ qua, vì flag2 đã được cập nhật.
+    R25:S07->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R26:C02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R27:Z01->M01 Không được áp dụng, vì thiếu fact: Z01
+    R28:Z02->M02 Không được áp dụng, vì thiếu fact: Z02
+    R29:Z03->M02 Không được áp dụng, vì thiếu fact: Z03
+    R30:Z04->M04 bỏ qua, vì flag1 đã được cập nhật.
+    R31:Z05->M03 Không được áp dụng, vì thiếu fact: Z05
+    R32:Z06->M01 Không được áp dụng, vì thiếu fact: Z06
+    R33:C01->M01 Không được áp dụng, vì thiếu fact: C01
+    R34:C02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R35:C03->M01 Không được áp dụng, vì thiếu fact: C03
+    R36:C02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R37:C04->M02 Không được áp dụng, vì thiếu fact: C04
+    R38:C05->M01 Không được áp dụng, vì thiếu fact: C05
+    R39:C06->M05 Không được áp dụng, vì thiếu fact: C06
+    R40:S01->M01 Không được áp dụng, vì thiếu fact: S01
+    R41:S02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R42:S03->M02 Không được áp dụng, vì thiếu fact: S03
+    R43:S04->M01 Không được áp dụng, vì thiếu fact: S04
+    R44:S05->M01 Không được áp dụng, vì thiếu fact: S05
+    R45:S06->M05 Không được áp dụng, vì thiếu fact: S06
+    R46:S07->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R47:C03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R48:K01->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R49:C03->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R50:C04->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R51:C04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R52:C05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R53:C05->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R54:C06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R55:C06->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R56:V01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R57:V01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R58:V02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R59:V02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R60:V03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R61:V03->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R62:V04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R63:V04->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R64:V05->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R65:V05->P06 Không được áp dụng, vì thiếu fact: V05
+    R66:S01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R67:S01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R68:S02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R69:S02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R70:S02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R71:S03->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R72:S03->P06 Không được áp dụng, vì thiếu fact: S03
+    R73:S04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R74:S04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R75:S05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R76:S05->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R77:S06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R78:S07->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R79:S07->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R80:L01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R81:L01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R82:L01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R83:L01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R84:L02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R85:L02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R86:L02->P05 bỏ qua, vì flag1 đã được cập nhật.
+    R87:L03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R88:L03->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R89:G02->N01 Không được áp dụng, vì thiếu fact: G02
+    R90:G01->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R91:G01->N03 bỏ qua, vì flag1 đã được cập nhật.
+    R92:G01->N04 bỏ qua, vì flag1 đã được cập nhật.
+    R93:G02->N05 Không được áp dụng, vì thiếu fact: G02
+    R94:G02->N06 Không được áp dụng, vì thiếu fact: G02
+    R95:G02->N07 Không được áp dụng, vì thiếu fact: G02
+    R96:G02->N08 Không được áp dụng, vì thiếu fact: G02
+    R97:G02->N09 không áp dụng, vì N09 nắm trong số các facts. Cập nhật flag2.
+    R98:G02->N10 Không được áp dụng, vì thiếu fact: G02
+    R99:Z01->N06 Không được áp dụng, vì thiếu fact: Z01
+    R100:Z01->N09 không áp dụng, vì N09 nắm trong số các facts. Cập nhật flag2.
+    R101:Z02->N06 Không được áp dụng, vì thiếu fact: Z02
+    R102:Z02->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R103:Z03->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R104:Z03->N07 Không được áp dụng, vì thiếu fact: Z03
+    R105:Z04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R106:Z04->N09 bỏ qua, vì flag1 đã được cập nhật.
+    R107:Z04->N05 được áp dụng. Cập nhật flag1. Facts C02, G01, K01, L02, S07, V03, Z04 suy ra P01, P02, P03, P04, N02, M04, P05, N03, N04, N09, N05.
+
+  12 ITERATION
+    R1:G01->P01 bỏ qua, vì flag1 đã được cập nhật.
+    R2:G01->P02 bỏ qua, vì flag1 đã được cập nhật.
+    R3:G01->P03 bỏ qua, vì flag1 đã được cập nhật.
+    R4:G01->P04 bỏ qua, vì flag1 đã được cập nhật.
+    R5:G02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R6:G02->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R7:G02->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R8:G02->P06 Không được áp dụng, vì thiếu fact: G02
+    R9:C01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R10:C01->P06 Không được áp dụng, vì thiếu fact: C01
+    R11:Z06->N08 Không được áp dụng, vì thiếu fact: Z06
+    R12:C01->N06 Không được áp dụng, vì thiếu fact: C01
+    R13:C02->N02 bỏ qua, vì flag1 đã được cập nhật.
+    R14:C03->N01 Không được áp dụng, vì thiếu fact: C03
+    R15:C04->N05 không áp dụng, vì N05 nắm trong số các facts. Cập nhật flag2.
+    R16:C05->N06 Không được áp dụng, vì thiếu fact: C05
+    R17:C06->N01 Không được áp dụng, vì thiếu fact: C06
+    R18:S01->N07 Không được áp dụng, vì thiếu fact: S01
+    R19:S02->N04 bỏ qua, vì flag2 đã được cập nhật.
+    R20:S03->N01 Không được áp dụng, vì thiếu fact: S03
+    R21:C02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R22:S04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R23:S05->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R24:S06->N04 bỏ qua, vì flag2 đã được cập nhật.
+    R25:S07->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R26:C02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R27:Z01->M01 Không được áp dụng, vì thiếu fact: Z01
+    R28:Z02->M02 Không được áp dụng, vì thiếu fact: Z02
+    R29:Z03->M02 Không được áp dụng, vì thiếu fact: Z03
+    R30:Z04->M04 bỏ qua, vì flag1 đã được cập nhật.
+    R31:Z05->M03 Không được áp dụng, vì thiếu fact: Z05
+    R32:Z06->M01 Không được áp dụng, vì thiếu fact: Z06
+    R33:C01->M01 Không được áp dụng, vì thiếu fact: C01
+    R34:C02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R35:C03->M01 Không được áp dụng, vì thiếu fact: C03
+    R36:C02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R37:C04->M02 Không được áp dụng, vì thiếu fact: C04
+    R38:C05->M01 Không được áp dụng, vì thiếu fact: C05
+    R39:C06->M05 Không được áp dụng, vì thiếu fact: C06
+    R40:S01->M01 Không được áp dụng, vì thiếu fact: S01
+    R41:S02->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R42:S03->M02 Không được áp dụng, vì thiếu fact: S03
+    R43:S04->M01 Không được áp dụng, vì thiếu fact: S04
+    R44:S05->M01 Không được áp dụng, vì thiếu fact: S05
+    R45:S06->M05 Không được áp dụng, vì thiếu fact: S06
+    R46:S07->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R47:C03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R48:K01->M04 bỏ qua, vì flag2 đã được cập nhật.
+    R49:C03->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R50:C04->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R51:C04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R52:C05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R53:C05->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R54:C06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R55:C06->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R56:V01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R57:V01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R58:V02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R59:V02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R60:V03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R61:V03->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R62:V04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R63:V04->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R64:V05->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R65:V05->P06 Không được áp dụng, vì thiếu fact: V05
+    R66:S01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R67:S01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R68:S02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R69:S02->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R70:S02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R71:S03->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R72:S03->P06 Không được áp dụng, vì thiếu fact: S03
+    R73:S04->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R74:S04->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R75:S05->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R76:S05->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R77:S06->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R78:S07->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R79:S07->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R80:L01->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R81:L01->P02 bỏ qua, vì flag2 đã được cập nhật.
+    R82:L01->P03 bỏ qua, vì flag2 đã được cập nhật.
+    R83:L01->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R84:L02->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R85:L02->P04 bỏ qua, vì flag2 đã được cập nhật.
+    R86:L02->P05 bỏ qua, vì flag1 đã được cập nhật.
+    R87:L03->P01 bỏ qua, vì flag2 đã được cập nhật.
+    R88:L03->P05 bỏ qua, vì flag2 đã được cập nhật.
+    R89:G02->N01 Không được áp dụng, vì thiếu fact: G02
+    R90:G01->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R91:G01->N03 bỏ qua, vì flag1 đã được cập nhật.
+    R92:G01->N04 bỏ qua, vì flag1 đã được cập nhật.
+    R93:G02->N05 không áp dụng, vì N05 nắm trong số các facts. Cập nhật flag2.
+    R94:G02->N06 Không được áp dụng, vì thiếu fact: G02
+    R95:G02->N07 Không được áp dụng, vì thiếu fact: G02
+    R96:G02->N08 Không được áp dụng, vì thiếu fact: G02
+    R97:G02->N09 bỏ qua, vì flag2 đã được cập nhật.
+    R98:G02->N10 Không được áp dụng, vì thiếu fact: G02
+    R99:Z01->N06 Không được áp dụng, vì thiếu fact: Z01
+    R100:Z01->N09 bỏ qua, vì flag2 đã được cập nhật.
+    R101:Z02->N06 Không được áp dụng, vì thiếu fact: Z02
+    R102:Z02->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R103:Z03->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R104:Z03->N07 Không được áp dụng, vì thiếu fact: Z03
+    R105:Z04->N02 bỏ qua, vì flag2 đã được cập nhật.
+    R106:Z04->N09 bỏ qua, vì flag1 đã được cập nhật.
+    R107:Z04->N05 bỏ qua, vì flag1 đã được cập nhật.
+    R108:Z05->N03 không áp dụng, vì N03 nắm trong số các facts. Cập nhật flag2.
+    R109:Z05->N06 Không được áp dụng, vì thiếu fact: Z05
+
+PART 3. Kết quả
+  1) Kết quả là : C02, G01, K01, L02, S07, V03, Z04, P01, P02, P03, P04, N02, M04, P05, N03, N04, N09, N05 .
+  2) Đường đi suy diễn được là:R1, R2, R3, R4, R13, R30, R86, R91, R92, R106, R107

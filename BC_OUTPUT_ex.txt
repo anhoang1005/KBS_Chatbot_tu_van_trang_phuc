@@ -1,0 +1,56 @@
+PART 1. Dữ liệu
+  1) Tập luật
+    R1: Z01,C03,S03->M01
+    R2: Z02,C02,S01->M02
+    R3: Z02,C03,S07,K01->M03
+    R4: Z04,C02,S07,K01->M04
+    R5: Z05,C02,S03->M05
+    R6: Z05,C02,S06->M05
+    R7: Z05,C06,S06->M05
+    R8: G01,Z06,C02,S03->N01
+    R9: G01,Z06,C06,S03->N01
+    R10: G01,Z04,C02,S07->N02
+    R11: G01,Z03,S04->N02
+    R12: G01,Z05->N03
+    R13: S07->N03
+    R14: G01,C03,S02->N04
+    R15: G01,C03,V04,S02,L02->P01
+    R16: G01,C02,V03,S07,L02->P01
+    R17: G01,C02,V03,S07,L01->P01
+    R18: G01,C05,V03,S01,L02->P01
+    R19: G01,C02,V04,S07,L01->P01
+    R20: G01,C05,V02,S01,L03->P01
+    R21: G01,C04,V01,S02,L01->P02
+    R22: G02,C04,V03,S05,L01->P02
+    R23: G01,C04,V01,S02->P02
+    R24: G02,C04,V01,S02,L01->P02
+    R25: G01,C04,V01,S03,L01->P03
+    R26: G01,C04,V01,S06,L01->P03
+    R27: G01,C06,V05,S03,L01->P03
+    R28: G02,C06,V05,S06,L01->P03
+    R29: G02,C06,V01,S04,L01->P03
+    R30: G01,C02,V02,S01,L01->P04
+    R31: G01,C02,V02,S01,L02->P04
+    R32: G01,C05,V02,S01,L01->P04
+    R33: G02,V04,S01,L01->P05
+    R34: G02,V04,S07,L01->P05
+    R35: G02,C06,V05,S03,L01->P06
+    R36: S03->P06
+
+  2) Thuộc tính của người dùng 
+    C02, G01, K01, L02, S07, V03, Z04.
+
+  3) Trang phục dự đoán
+    M04.
+
+PART 2. Suy diễn
+  1) Goal M04. Tìm thấy luật R4:Z04,C02,S07,K01->M04. Các goals mới cần chứng mình là Z04, C02, S07, K01.
+  2) -Goal Z04. Cập nhật thuộc tính Z04, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, K01, L02, S07, V03, Z04. Trả về thành công.
+  3) -Goal C02. Cập nhật thuộc tính C02, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, K01, L02, S07, V03, Z04. Trả về thành công.
+  4) -Goal S07. Cập nhật thuộc tính S07, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, K01, L02, S07, V03, Z04. Trả về thành công.
+  5) -Goal K01. Cập nhật thuộc tính K01, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, K01, L02, S07, V03, Z04. Trả về thành công.
+  6) ==>Goal M04. Đã được chứng minh, Trả về thành công
+
+PART 3. Kết quả
+  1) Goal M04 được chứng minh.
+  2) Road: R4.
